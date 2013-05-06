@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Videoplayer Refactored</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        window.videplayerConfig = {
+            stage : 'production',
+            playerAttributes : {
+                poster : 'poster2.jpg',
+                width : 640,
+                height : 360,
+                endposter: 'splash.jpg',
+                endlink: 'http://www.web.de'
+            },
+            autoplay: false,
+            sources : {
+                poor : {
+                    ogg : 'video/trailer_test.ogg',
+                    webm : 'video/trailer_test.webmvp8.webm',
+                    mp4 : 'video/trailer_test.mp4',
+                    ogv : 'video/trailer_test.theora.ogv'
+                },
+                good : {
+                    ogg : 'video/trailer_test.ogg',
+                    webm : 'video/trailer_test.webmvp8.webm',
+                    mp4 : 'video/trailer_test.mp4',
+                    ogv : 'video/trailer_test.theora.ogv'
+                }
+            },
+            tracking  : {
+                '25' : '//lxdus02.int.cinetic.de:8250/prod/videoplayer/tracker.php?progress=25&client={client}',
+                '50' : '//lxdus02.int.cinetic.de:8250/prod/videoplayer/tracker.php?progress=50&client={client}',
+                '75' : '//lxdus02.int.cinetic.de:8250/prod/videoplayer/tracker.php?progress=75&client={client}',
+                '100' : '//lxdus02.int.cinetic.de:8250/prod/videoplayer/tracker.php?progress=100&client={client}',
+            }
+        }
+    </script>
+    <script type="text/javascript" src="js/mobileplayer.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mobileplayer.css">
+</head>
+<body>
+    <div id="player"></div>
+    <div id="debug"></div>
+</body>
+</html>
